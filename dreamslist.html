@@ -1,0 +1,10 @@
+<a ui-sref="home">Revenir à l'accueil</a>
+<ul>
+  <li ng-repeat="dream in dreams">
+    <!-- On peut utiliser ui-sref pour se déplacer sur un $state donné -->
+    <!-- Utilisé sous la forme ui-sref="nom.du.state", aucun param n'est fourni -->
+    <!-- Pour envoyer les params, il faut l'utiliser sous la forme ui-sref="nom.du.state({params})" -->
+    <a ui-sref="dreams.dream({dreamId: dream.id})" ng-bind="dream.name"></a>
+    <!-- UI-ROUTER transformera le ui-sref par href="#!/dreams/{dream.id}" -->
+  </li>
+</ul>
