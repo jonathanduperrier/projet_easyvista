@@ -1,4 +1,10 @@
-.fifty {
-    display: inline-block;
-    width: 50%;
+.menubar {
+    float: left;
+    display: block;
+    width: 30%;
+}
+
+.video_side {
+    float: left;
+    display: block;
 }

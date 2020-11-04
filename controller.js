@@ -26,6 +26,6 @@ angular.module('YTJSLibApp')
 .controller('homeController', function($scope){
     $scope.toto = "toto";
 })
-.controller('videoUserController', function($scope){
-    $scope.toto = "videoUserController";
+.controller('videoController', function($scope, $stateParams){
+    $scope.videoId = $stateParams.id;
 });
