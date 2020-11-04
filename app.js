@@ -13,7 +13,7 @@ angular.module("YTJSLibApp", ["ui.router"])
             controller: 'homeController',
         })
         .state('video', {
-          url: '/video/:id',
+          url: '/video/:id/:title',
           controller: 'videoController',
           templateUrl: 'video.html',
       })
