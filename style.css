@@ -1,6 +1,9 @@
 body {
     font-family: Verdana,sans-serif;
 }
+iframe {
+    border: none;
+}
 .menubar {
     float: left;
     display: block;
