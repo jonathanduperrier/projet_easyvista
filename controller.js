@@ -6,4 +6,7 @@ angular.module('YTJSLibApp')
     $scope.videoId = $stateParams.id;
     $scope.videoTitle = $stateParams.title;
     $scope.videoLink = $sce.trustAsResourceUrl("//www.youtube.com/embed/" + $scope.videoId);
+})
+.controller('searchVideosController', function($scope, $stateParams, $sce){
+
 });
