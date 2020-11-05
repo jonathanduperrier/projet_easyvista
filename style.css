@@ -1,6 +1,15 @@
 body {
     font-family: Verdana,sans-serif;
 }
+.menubar {
+    float: left;
+    display: block;
+    width: 25%;
+}
+.video_side {
+    float: left;
+    display: block;
+}
 .video_button{
     width: 75%;
     background-color: white;
@@ -19,14 +28,4 @@ body {
 }
 .video_button a:hover {
     color: #5e00ff;
-}
-.menubar {
-    float: left;
-    display: block;
-    width: 25%;
-}
-
-.video_side {
-    float: left;
-    display: block;
 }
