@@ -33,7 +33,7 @@
                 echo '</div>';
             }
         } catch (Exception $e) {
-            echo "<h2>L'utilisateur $user est invalide</h2>"; 
+            echo "<span class=\"error\">L'utilisateur $user est invalide</span>"; 
         }
         //on restore le gestionnaire d'erreurs précédent
         restore_error_handler();
