@@ -1,0 +1,11 @@
+(function(){
+    angular.module('YTJSLibApp')
+    .directive("searchBox",function(){
+        return{
+            templateUrl:"templates/searchBox.html",
+            link:function(scope,elem,attrs){
+                console.log(scope);
+            }
+        }
+    });
+})();

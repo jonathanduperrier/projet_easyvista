@@ -9,9 +9,12 @@
     <script type="text/javascript" src="js/angular-ui-router.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="controller.js"></script>
+    <script type="text/javascript" src="directives/searchBox.js"></script>
+    <script type="text/javascript" src="directives/pagination.js"></script>
   </head>
 
   <body ng-app="YTJSLibApp">
+    <title>Youtube JS Librairy</title>
     <!-- On affiche un message le temps que les scripts chargent -->
     <div class="menubar">
     <?php

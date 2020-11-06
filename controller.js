@@ -1,6 +1,6 @@
 angular.module('YTJSLibApp')
 .controller('homeController', function($scope){
-    $scope.toto = "toto";
+    $scope.title = "Select a video";
 })
 .controller('videoController', function($scope, $stateParams, $sce){
     $scope.videoId = $stateParams.id;
@@ -8,5 +8,5 @@ angular.module('YTJSLibApp')
     $scope.videoLink = $sce.trustAsResourceUrl("//www.youtube.com/embed/" + $scope.videoId);
 })
 .controller('searchVideosController', function($scope, $stateParams, $sce){
-
+    
 });
