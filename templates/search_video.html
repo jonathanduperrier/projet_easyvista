@@ -1,2 +1,20 @@
 <h1>Video Search Engine</h1>
 <search-box></search-box>
+<pagination></pagination>
+<div ng-if="checkDataLength(youtubeData)">
+    <div class="panel-body">
+        <div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="data in youtubeData">
+            <div class="well well-sm media">
+                <a class="thumbnail pull-left" target="_block" href="https://www.youtube.com/watch?v={{data.id.videoId}}">
+                    <img alt="{{data.snippet.title}}" src="{{data.snippet.thumbnails.default.url}}" width="120" height="90">
+                </a>
+                <div class="media-body">
+                    <a target="_block" href="https://www.youtube.com/watch?v={{data.id.videoId}}">{{data.snippet.title}}</a>
+                    <p>By <a target="_block" href="https://www.youtube.com/channel/{{data.snippet.channelId}}">
+                        <span class="label label-info">{{data.snippet.channelTitle}}</span>
+                    </a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
