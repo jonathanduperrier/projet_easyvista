@@ -3,7 +3,8 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <link data-require="angular.js@1.7.8" data-semver="1.7.8" rel="stylesheet" href="https://code.angularjs.org/1.7.8/angular-csp.css" />
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all" />
     <script type="text/javascript" src="js/angular.js"></script>
     <script type="text/javascript" src="js/angular-ui-router.js"></script>
     <script type="text/javascript" src="js/api_key.js"></script>

@@ -16,7 +16,7 @@ angular.module('YTJSLibApp')
             params: {
                 key: API_KEY,
                 type: 'video',
-                maxResults: '12',
+                maxResults: '8',
                 pageToken: $scope.nextPage ? $scope.nextPage : '',
                 part: 'id,snippet',
                 fields: 'items/id,items/snippet/title,items/snippet/description,items/snippet/thumbnails/default,items/snippet/channelTitle,nextPageToken,prevPageToken',
@@ -28,8 +28,8 @@ angular.module('YTJSLibApp')
             }
             $scope.youtubeSearchText = searchText;
             $scope.youtubeData = data.data.items;
-            $scope.nextPageToken = data.nextPageToken;
-            $scope.prevPageToken = data.prevPageToken;
+            $scope.nextPageToken = data.data.nextPageToken;
+            $scope.prevPageToken = data.data.prevPageToken;
         });
     };
     $scope.checkDataLength = function(data){

@@ -1,7 +1,7 @@
 <div style="text-align:center;" ng-if="checkDataLength(youtubeData)">
     <input type="hidden" id="pageToken" value="">
-    <div class="" role="group" aria-label="...">
-        <button type="button" ng-show="prevPageToken" id="pageTokenPrev" ng-click="callNextPageFn(prevPageToken)" class="">Prev</button>
-        <button type="button" id="pageTokenNext" ng-click="callNextPageFn(nextPageToken)" class="">Next</button>
+    <div class="btn-group" role="group" aria-label="...">
+        <button type="button" ng-show="prevPageToken" id="pageTokenPrev" ng-click="callNextPageFn(prevPageToken)" class="btn btn-default">Prev</button>
+        <button type="button" id="pageTokenNext" ng-click="callNextPageFn(nextPageToken)" class="btn btn-default">Next</button>
     </div>
 </div>
