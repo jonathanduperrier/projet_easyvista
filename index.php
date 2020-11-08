@@ -37,7 +37,7 @@
             //Nom de la librairie
             echo '<div class="lib_title">'.$obj->name.'</div>';
             echo '<div class="video_button">';
-            echo '<a href="#!/search-videos">[+]</a>';
+            echo '<a href="?user='.$user.'#!/search-videos/'.$user.'">[+]</a>';
             echo '</div>';
             //Afficher un lien par vidéo
             foreach($obj->videos as $video){

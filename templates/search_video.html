@@ -13,6 +13,9 @@
                     <p>By <a target="_block" href="https://www.youtube.com/channel/{{data.snippet.channelId}}">
                         <span class="label label-info">{{data.snippet.channelTitle}}</span>
                     </a></p>
+                    <button class="btn btn-primary" ng-click="addToLibrairy(data.snippet.title, data.id.videoId)">
+                        [+]
+                    </button>
                 </div>
             </div>
         </div>

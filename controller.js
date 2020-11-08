@@ -7,10 +7,11 @@ angular.module('YTJSLibApp')
     $scope.videoTitle = $stateParams.title;
     $scope.videoLink = $sce.trustAsResourceUrl("//www.youtube.com/embed/" + $scope.videoId);
 })
-.controller('searchVideosController', function($scope, $http, $filter){
+.controller('searchVideosController', function($scope, $http, $filter, $stateParams){
     $scope.youtubeData = [];
     $scope.nextPage = "";
     $scope.youtubeSearchText = "";
+    $scope.user = $stateParams.user;
     $scope.getYoutubeData = function(searchText){
         $http.get('https://www.googleapis.com/youtube/v3/search', {
             params: {
@@ -22,8 +23,8 @@ angular.module('YTJSLibApp')
                 fields: 'items/id,items/snippet/title,items/snippet/description,items/snippet/thumbnails/default,items/snippet/channelTitle,nextPageToken,prevPageToken',
                 q: searchText
             }
-        }).then( function (data) {
-            if (data.data.items.length === 0) {
+        }).then(function(data){
+            if(data.data.items.length === 0) {
                 $scope.youtubeData = 'No results were found!';
             }
             $scope.youtubeSearchText = searchText;
@@ -39,4 +40,15 @@ angular.module('YTJSLibApp')
         $scope.nextPage = nextPage;
         $scope.getYoutubeData($scope.youtubeSearchText);
     };
+    $scope.addToLibrairy = function(title, video_id){
+        $http.get(MAIN_URL + '/add_video.php', {
+            params: {
+                user: $scope.user,
+                title: title,
+                video_id: video_id,
+            }
+        }).then(function(data){
+            window.location.reload();
+        });
+    }
 });
