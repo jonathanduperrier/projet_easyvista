@@ -16,7 +16,7 @@ angular.module('YTJSLibApp')
             params: {
                 key: API_KEY,
                 type: 'video',
-                maxResults: '8',
+                maxResults: '9',
                 pageToken: $scope.nextPage ? $scope.nextPage : '',
                 part: 'id,snippet',
                 fields: 'items/id,items/snippet/title,items/snippet/description,items/snippet/thumbnails/default,items/snippet/channelTitle,nextPageToken,prevPageToken',
