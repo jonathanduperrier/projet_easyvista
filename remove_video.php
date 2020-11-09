@@ -8,7 +8,6 @@
         if( isset($_GET["user"])){
             $user = $_GET["user"];
         } else {
-            $user = null;
             throw new Exception("no user");
         }
         if( isset($_GET["video_id"])){
@@ -16,22 +15,16 @@
         } else {
             throw new Exception("no video id");
         }
-        if( isset($_GET["title"])){
-            $title = $_GET["title"];
-        } else {
-            throw new Exception("no title");
-        }
+
         //Lecture du fichier JSON
         $json = file_get_contents("lib/$user.lib.json", true);
-        $obj = json_decode($json);
-
-        //On ajoute les données passées en paramètre dans le fichier JSON
-        $data["title"] = $title;
-        $data["id"] = $videoId;
-        array_push($obj->videos, $data);
-        // echo "<pre>";
-        // print_r($obj);
-        // echo "</pre>";
+        $obj = json_decode($json, true);
+        //Recherce de l'élément à supprimer en fonction de l'id de la vidéo
+        foreach($obj["videos"] as $key=>$value){
+            if($value["id"] == $videoId){
+                unset($obj["videos"][$key]);
+            }
+        }
         $json = json_encode($obj);
         file_put_contents("lib/$user.lib.json", $json);
         echo "<p>Success</p>";

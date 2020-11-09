@@ -1,17 +1,1 @@
-{
-  "name": "john",
-  "videos": [
-    {
-      "title": "EasyVista IT Service Management for the Mobile User (Française) ",
-      "id": "WROlGNthbNE"
-    },
-    {
-      "title": "AngularJS Fundamentals In 60-ish Minutes",
-      "id": "i9MHigUZKEM"
-    },
-    {
-      "title": "EasyVista IT Heroes - Episode 1",
-      "id": "CkZKknKjEwo"
-    }
-  ]
-}
+{"name":"john","videos":[{"title":"EasyVista IT Service Management for the Mobile User (Fran\u00e7aise) ","id":"WROlGNthbNE"},{"title":"AngularJS Fundamentals In 60-ish Minutes","id":"i9MHigUZKEM"},{"title":"EasyVista IT Heroes - Episode 1","id":"CkZKknKjEwo"},{"title":"Emeutes en Angleterre - Banlieues et Violence","id":"GmVztbsVLUk"},{"title":"OEP - Embarque [Prod. Scooby] (OfficialVideo)","id":"-Afi_NQMG9g"},{"title":"ElGrandeToto - Halla Halla (Prod by Familionnaire X Yo Asel) #CAMELEON","id":"7yZ_mNTuEfY"},{"title":"Les SUV, un fl\u00e9au pour le r\u00e9chauffement climatique ?","id":"qpYusFn1_-M"},{"title":"C\u00f4te d\u2019Ivoire : Pascal Affi N&#39;Guessan arr\u00eat\u00e9","id":"DpNneIhE9zY"}]}

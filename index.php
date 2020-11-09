@@ -8,6 +8,7 @@
     <script type="text/javascript" src="js/angular.js"></script>
     <script type="text/javascript" src="js/angular-ui-router.js"></script>
     <script type="text/javascript" src="js/api_key.js"></script>
+    <script type="text/javascript" src="js/remove_video.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="controller.js"></script>
     <script type="text/javascript" src="directives/searchBox.js"></script>
@@ -42,7 +43,8 @@
             //Afficher un lien par vidéo
             foreach($obj->videos as $video){
                 echo '<div class="video_button">';
-                echo '<a href="?user='.$user.'#!/video/'. $video->id .'/'. $video->title .'">'. $video->title .'</a>';
+                echo '<button class="btn btn-primary" onClick="removeToLibrairy(\''.$user.'\', \''.$video->id.'\')">[x]</button>';
+                echo '&nbsp;<a href="?user='.$user.'#!/video/'. $video->id .'/'. $video->title .'">'. $video->title .'</a>';
                 echo '</div>';
             }
         } catch (Exception $e) {
