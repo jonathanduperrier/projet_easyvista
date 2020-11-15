@@ -5,14 +5,12 @@
         throw new ErrorException( $err_msg, 0, $err_severity, $err_file, $err_line );
     }, E_WARNING);
     try {
-        if( isset($_GET["user"])){
-            $user = $_GET["user"];
-        } else {
+        $user = filter_input(INPUT_GET, 'user', FILTER_SANITIZE_STRING);
+        if($user == NULL){
             throw new Exception("no user");
         }
-        if( isset($_GET["video_id"])){
-            $videoId = $_GET["video_id"];
-        } else {
+        $videoId = filter_input(INPUT_GET, 'video_id', FILTER_SANITIZE_STRING);
+        if($videoId == NULL){
             throw new Exception("no video id");
         }
 

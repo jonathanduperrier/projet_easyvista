@@ -26,10 +26,8 @@
         }, E_WARNING);
         try {
             //On récupère l'user et on gere l'exception si celui-ci n'existe pas
-            if( isset($_GET["user"])){
-              $user = $_GET["user"];
-            } else {
-              $user = null;
+            $user = filter_input(INPUT_GET, 'user', FILTER_SANITIZE_STRING);
+            if($user == NULL){
               throw new Exception("no user");
             }
             //Lecture du fichier JSON

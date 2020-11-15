@@ -5,30 +5,27 @@
         throw new ErrorException( $err_msg, 0, $err_severity, $err_file, $err_line );
     }, E_WARNING);
     try {
-        if( isset($_GET["user"])){
-            $user = $_GET["user"];
-        } else {
-            $user = null;
+        $user = filter_input(INPUT_GET, 'user', FILTER_SANITIZE_STRING);
+        if($user == NULL){
             throw new Exception("no user");
         }
-        if( isset($_GET["video_id"])){
-            $videoId = $_GET["video_id"];
-        } else {
+        $videoId = filter_input(INPUT_GET, 'video_id', FILTER_SANITIZE_STRING);
+        if($videoId == NULL){
             throw new Exception("no video id");
         }
-        if( isset($_GET["title"])){
-            $title = $_GET["title"];
-        } else {
+        $title = filter_input(INPUT_GET, 'title', FILTER_SANITIZE_STRING);
+        if($title == NULL){
             throw new Exception("no title");
         }
+
         //Lecture du fichier JSON
         $json = file_get_contents("lib/$user.lib.json", true);
-        $obj = json_decode($json);
+        $obj = json_decode($json, true);
 
         //On ajoute les données passées en paramètre dans le fichier JSON
         $data["title"] = $title;
         $data["id"] = $videoId;
-        array_push($obj->videos, $data);
+        array_push($obj["videos"], $data);
         // echo "<pre>";
         // print_r($obj);
         // echo "</pre>";
