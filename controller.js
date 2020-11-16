@@ -15,7 +15,7 @@ angular.module('YTJSLibApp')
     $scope.getYoutubeData = function(searchText){
         $http.get('https://www.googleapis.com/youtube/v3/search', {
             params: {
-                key: API_KEY,
+                key: api_key,
                 type: 'video',
                 maxResults: '9',
                 pageToken: $scope.nextPage ? $scope.nextPage : '',
@@ -41,7 +41,7 @@ angular.module('YTJSLibApp')
         $scope.getYoutubeData($scope.youtubeSearchText);
     };
     $scope.addToLibrairy = function(title, video_id){
-        $http.get(MAIN_URL + '/add_video.php', {
+        $http.get(main_url + '/add_video.php', {
             params: {
                 user: $scope.user,
                 title: title,

@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all" />
     <script type="text/javascript" src="js/angular.js"></script>
     <script type="text/javascript" src="js/angular-ui-router.js"></script>
-    <script type="text/javascript" src="js/api_key.js"></script>
+    <script type="text/javascript" src="js/env.js"></script>
     <script type="text/javascript" src="js/remove_video.js"></script>
+    <script type="text/javascript" src="js/env.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="controller.js"></script>
     <script type="text/javascript" src="directives/searchBox.js"></script>

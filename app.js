@@ -1,7 +1,6 @@
 // Code goes here
 // "YTJSLibApp" correspond au module root indiqué dans l'index.html
 // URL du projet
-MAIN_URL = 'http://localhost:8888/easyvista_2';
 angular.module("YTJSLibApp", ["ui.router"])
   .config(["$urlRouterProvider", "$stateProvider", function($urlRouterProvider, $stateProvider) {
     // On indique que si l'url n'est pas connue, on redirige vers "/forbidden"

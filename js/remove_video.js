@@ -3,7 +3,7 @@ function removeToLibrairy(user, video_id){
     if(r == true){
         var xhr = new XMLHttpRequest(),
         method = "GET",
-        url = MAIN_URL+"/remove_video.php?user="+user+"&video_id="+video_id;
+        url = main_url+"/remove_video.php?user="+user+"&video_id="+video_id;
         xhr.open(method, url, true);
         xhr.onreadystatechange = function () {
             if(xhr.readyState === 4 && xhr.status === 200) {
